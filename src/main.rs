@@ -22,6 +22,17 @@ impl eframe::App for MyEguiApp {
    fn update(&mut self, ctx: &egui::Context, frame: &mut eframe::Frame) {
        egui::CentralPanel::default().show(ctx, |ui| {
            ui.heading("Hello World!");
+           ui.horizontal(|ui| {
+                ui.spacing_mut().item_spacing.x = 0.0;
+                ui.label("The triangle is being painted using ");
+                ui.hyperlink_to("glow", "https://github.com/grovesNL/glow");
+                ui.label(" (OpenGL).");
+                ui.button("Yes");
+                ui.button("No");
+            });
+           ui.
+
        });
    }
 }
+ui.
